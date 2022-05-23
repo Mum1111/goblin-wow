@@ -51,7 +51,7 @@ const Navbar = () => {
               saveIndex("/");
             }}
           >
-            <Link to="/">全部</Link>
+            <Link to="/">计算器</Link>
           </div>
           <div
             className="link"
@@ -62,7 +62,7 @@ const Navbar = () => {
               saveIndex("/sale");
             }}
           >
-            <Link to="/sale">折扣</Link>
+            <Link to="/sale">趋势</Link>
           </div>
           <div
             className="link"
@@ -73,7 +73,7 @@ const Navbar = () => {
               saveIndex("/wish");
             }}
           >
-            <Link to="/wish">心愿单</Link>
+            <Link to="/wish">账本</Link>
           </div>
         </div>
         <div className="right-part">
