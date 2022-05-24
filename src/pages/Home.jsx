@@ -1,15 +1,24 @@
-import * as React from "react";
-import { Form, Input, Button, } from "antd-mobile";
+import React from "react";
+import { Form, Input, Button } from "antd-mobile";
+import options from "../data/options";
+import Title from "../components/Title";
+import CascadePickerBox from "../components/CascadePickerBox";
+
+
 
 function Home() {
+
   return (
     <>
-      <div>炼金价格计算</div>
-      <Form layout="horizontal" footer={
-          <Button block type='submit' color='primary' size='large'>
-            提交
+      <Title title="导入原材价格"></Title>
+      <Form
+        layout="horizontal"
+        footer={
+          <Button block type="submit" color="primary" size="large">
+            导入
           </Button>
-        }>
+        }
+      >
         <Form.Item label="孀花" name="widow">
           <Input placeholder="请输入孀花价格" clearable type="number" />
         </Form.Item>
@@ -26,6 +35,9 @@ function Home() {
           <Input placeholder="请输入晋荣花价格" clearable type="number" />
         </Form.Item>
       </Form>
+
+      <Title title="选择商品"></Title>
+      <CascadePickerBox options={options}></CascadePickerBox>
     </>
   );
 }
