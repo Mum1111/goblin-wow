@@ -1,13 +1,11 @@
 import React from "react";
-import { Form, Input, Button } from "antd-mobile";
+import { Form, Input, Button} from "antd-mobile";
 import options from "../data/options";
 import Title from "../components/Title";
 import CascadePickerBox from "../components/CascadePickerBox";
-
-
+import Sheet from "../components/Sheet";
 
 function Home() {
-
   return (
     <>
       <Title title="导入原材价格"></Title>
@@ -38,6 +36,11 @@ function Home() {
 
       <Title title="选择商品"></Title>
       <CascadePickerBox options={options}></CascadePickerBox>
+      <Title title="成本计算"></Title>
+      <Sheet></Sheet>
+      <Title title="历史记录"></Title>
+      {/* TODO: 动态调整表格大小 */}
+      <Sheet></Sheet>
     </>
   );
 }

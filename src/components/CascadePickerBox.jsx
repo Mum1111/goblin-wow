@@ -33,8 +33,7 @@ function CascadePickerBox(props) {
         }}
         onConfirm={(val, extend) => {
           const lastEle = extend.items.pop();
-          setValue(lastEle.label);
-          //   console.log("onConfirm", val, extend.items);
+          setValue(lastEle?.label);
         }}
       />
     </>
