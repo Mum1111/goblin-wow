@@ -4,6 +4,7 @@ import casc from "./casc.module.scss";
 
 function CascadePickerBox(props) {
   const [visible, setVisible] = useState(false);
+  const [value, setValue] = useState("");
 
   const { options } = props;
 
@@ -20,7 +21,7 @@ function CascadePickerBox(props) {
               setVisible(true);
             }}
           >
-            请选择商品&gt;
+            {value ? value : "请选择商品 >"}
           </div>
         </Grid.Item>
       </Grid>
@@ -31,7 +32,9 @@ function CascadePickerBox(props) {
           setVisible(false);
         }}
         onConfirm={(val, extend) => {
-          console.log("onConfirm", val, extend.items);
+          const lastEle = extend.items.pop();
+          setValue(lastEle.label);
+          //   console.log("onConfirm", val, extend.items);
         }}
       />
     </>
