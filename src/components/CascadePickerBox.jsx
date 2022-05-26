@@ -31,8 +31,11 @@ function CascadePickerBox(props) {
         onClose={() => {
           setVisible(false);
         }}
-        onConfirm={(val, extend) => {
-          const lastEle = extend.items.pop();
+              onConfirm={(val, extend) => {
+                console.log('extends', val,extend.items)
+            const lastEle = extend.items.pop();
+            console.log('extends', extend.items, lastEle)
+
           setValue(lastEle?.label);
         }}
       />

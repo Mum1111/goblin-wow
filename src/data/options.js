@@ -1,27 +1,15 @@
 const  options = [
     {
-      label: '浙江',
-      value: '浙江',
+      label: '炼金',
+      value: '炼金',
       children: [
         {
-          label: '杭州',
-          value: '杭州',
+          label: '隐秘精魂药水',
+          value: '隐秘精魂药水',
         },
         {
-          label: '宁波',
-          value: '宁波',
-          children: [
-            {
-              label: '街道',
-              value: '街道',
-              children: [
-                {
-                  label: '小区1',
-                  value: '小区1',
-                },
-              ],
-            },
-          ],
+          label: '阴翳视线药水',
+          value: '阴翳视线药水',
         },
       ],
     },
@@ -40,17 +28,13 @@ const  options = [
             {
               label: '街道',
               value: '街道',
-              children: [
-                {
-                  label: '小区2',
-                  value: '小区2',
-                },
-              ],
             },
           ],
         },
       ],
     },
 ]
+
+
   
 export default options
